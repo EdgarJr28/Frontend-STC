@@ -5,7 +5,7 @@ Este proyecto incluye un frontend desarrollado con [React](https://reactjs.org/)
 ### Características
 
 - **Interfaz de usuario**: Proporciona una interfaz intuitiva para gestionar artículos.
-- **Consumo de API**: Utiliza la API del backend para realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar).
+- **Consumo de API**: Utiliza la API del backend para realizar operaciones (Crear, Leer).
 
 ### Instalación
 
