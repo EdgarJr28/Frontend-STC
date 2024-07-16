@@ -48,7 +48,7 @@ const Home = () => {
                     onChange={handleSearchChange}
                 />
             </div>
-            <div className="bg-gray-100 h-full p-4 overflow-y-auto">
+            <div className="bg-gray-100 h-screen p-4 overflow-y-auto">
                 {filteredArticles.length > 0 ? (
 
                     filteredArticles.map((article, index) => (

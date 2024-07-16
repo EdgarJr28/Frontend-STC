@@ -35,6 +35,7 @@ const NewArticle = ({ onClick, onClose }) => {
                 description: formArticle.description,
                 url: formArticle.url,
                 urlToImage: formArticle.urlToImage,
+                publishedAt: new Date().toISOString()
             }
             if (formArticle.title === "" || formArticle.author === "" || formArticle.description === "" || formArticle.url === "" || formArticle.urlToImage === "") {
                 setError({ message: 'All fields are required' })
