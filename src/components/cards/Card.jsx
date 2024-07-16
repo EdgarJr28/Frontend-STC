@@ -2,8 +2,9 @@ import React from 'react'
 
 const Card = ({ title, img, author, description, onClick }) => {
     return (
-        <a onClick={onClick}>
-            <div className="max-w-96 sm:max-w-[613px] mx-auto bg-white shadow-md rounded-lg overflow-hidden my-4 border-2 border-gray-200 p-4">
+
+        <div className="max-w-96 sm:max-w-[613px] mx-auto bg-white shadow-md rounded-lg overflow-hidden my-4 border-2 border-gray-200 p-4">
+            <a onClick={onClick}>
                 <div className="flex flex-col sm:flex-row items-center px-4 sm:p-4 cursor-pointer">
                     <div className="w-32 h-32 bg-gray-200 rounded-xl flex-shrink-0 mb-4 sm:mb-0">
                         <img src={img} alt="Article" className="object-cover w-full h-full rounded-xl" />
@@ -14,9 +15,9 @@ const Card = ({ title, img, author, description, onClick }) => {
                         <p className="text-gray-700 mt-2">{description}</p>
                     </div>
                 </div>
-            </div>
+            </a>
+        </div >
 
-        </a>
     )
 }
 export default Card
