@@ -11,7 +11,6 @@ const ShowArticle = ({ data, onClose }) => {
                 <div className="flex justify-center">
                     <img src={data.urlToImage} alt={data.title} className="max-w-full h-46 sm:h-80 rounded-lg shadow-lg" />
                 </div>
-
                 <p className="text-gray-700 text-sm mt-4 mb-6">{data.description}</p>
 
                 <div className="flex justify-between items-center">

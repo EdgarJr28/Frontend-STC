@@ -44,7 +44,7 @@ const NewArticle = ({ onClick, onClose }) => {
             if (newArticle) {
                 setFormArticle({ title: '', author: '', description: '', url: '', urlToImage: '' })
                 setPopUpStatus(true);
-                setPropsPopUp({ status: true, message: 'Cancha registrada con exito.' })
+                setPropsPopUp({ status: true, message: 'Article successfully registered.' })
                 setTimeout(() => {
                     setPopUpStatus(false)
                 }, 4000);
