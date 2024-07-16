@@ -6,8 +6,8 @@ import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons'
 const ShowArticle = ({ data, onClose }) => {
     return (
         <ModalContainer onClose={onClose}>
-            <div className="px-4">
-                <h2 className="text-xl text-center font-semibold mb-2 text-black">{data.title}</h2>
+            <div className="p-4 ">
+                <h2 className="text-xl text-center font-semibold mb-2 text-black p-2">{data.title}</h2>
                 <div className="flex justify-center">
                     <img src={data.urlToImage} alt={data.title} className="max-w-full h-46 sm:h-80 rounded-lg shadow-lg" />
                 </div>
