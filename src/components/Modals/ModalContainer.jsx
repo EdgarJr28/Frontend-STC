@@ -8,10 +8,22 @@ const ModalContainer = ({ children, className, onClose }) => {
     }
   };
 
+  // Función para manejar el evento de teclado
+  const handleEscapeKey = (e) => {
+    if (e.key === 'Escape') {
+      onClose();
+    }
+  };
+
   useEffect(() => {
     document.addEventListener('mousedown', handleOutsideClick);
+    document.addEventListener('keydown', handleEscapeKey);
+    document.body.classList.add('body-scroll-lock');
+
     return () => {
       document.removeEventListener('mousedown', handleOutsideClick);
+      document.removeEventListener('keydown', handleEscapeKey);
+      document.body.classList.remove('body-scroll-lock');
     };
   }, []);
 

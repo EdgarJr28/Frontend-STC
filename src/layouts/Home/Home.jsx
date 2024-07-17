@@ -37,33 +37,38 @@ const Home = () => {
     };
 
     return (
-        <div className='min-h-screen bg-gray-100'>
-            <ButtonAdd text={`Add Article`} onClick={handleNewArticleModal} />
-            <div className="flex justify-center py-4">
-                <input
-                    type="text"
-                    placeholder="Search by title or author"
-                    className="w-96 p-2 border border-gray-300 rounded-md shadow-sm"
-                    value={searchTerm}
-                    onChange={handleSearchChange}
-                />
-            </div>
-            <div className="bg-gray-100 h-screen p-4 overflow-y-auto">
-                {filteredArticles.length > 0 ? (
+        <>
+            <div className='min-h-screen bg-gray-100'>
+                <div className="flex justify-center items-center pt-4 pb-2 relative">
+                    <input
+                        type="text"
+                        placeholder="Search by title or author"
+                        className="md:w-96 p-2 border border-gray-300 rounded-md shadow-sm"
+                        value={searchTerm}
+                        onChange={handleSearchChange}
+                    />
+                    <div className="ml-2">
+                        <ButtonAdd text="Add Article" onClick={handleNewArticleModal} />
+                    </div>
+                </div>
+                <div className="bg-gray-100 h-screen p-4 overflow-y-auto">
+                    {filteredArticles.length > 0 ? (
 
-                    filteredArticles.map((article, index) => (
-                        <Card
-                            key={index}
-                            img={article.urlToImage}
-                            title={article.title}
-                            author={article.author}
-                            description={article.description}
-                            onClick={() => handleShowArticle(article)}
-                        />
-                    ))
-                ) : (
-                    <p className="text-center text-gray-500">No results found.</p>
-                )}
+                        filteredArticles.map((article, index) => (
+                            <Card
+                                key={index}
+                                img={article.urlToImage}
+                                title={article.title}
+                                author={article.author}
+                                description={article.description}
+                                onClick={() => handleShowArticle(article)}
+                            />
+                        ))
+                    ) : (
+                        <p className="text-center text-gray-500">No results found.</p>
+                    )}
+                </div>
+
             </div>
             {showArticle.show && (
                 <ShowArticle data={showArticle.data} onClose={handleCloseArticle} />
@@ -73,7 +78,7 @@ const Home = () => {
                     <NewArticle onClose={() => { setShowNewArticle(!showNewArticle) }} />  // componente para agregar un nuevo articulo
                 )
             }
-        </div>
+        </>
     );
 };
 
