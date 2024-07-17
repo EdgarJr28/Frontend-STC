@@ -38,7 +38,7 @@ const Home = () => {
 
     return (
         <>
-            <div className='min-h-screen bg-gray-100'>
+            <div className='max-h-screen bg-gray-100'>
                 <div className="flex justify-center items-center pt-4 pb-2 relative">
                     <input
                         type="text"
@@ -51,7 +51,7 @@ const Home = () => {
                         <ButtonAdd text="Add Article" onClick={handleNewArticleModal} />
                     </div>
                 </div>
-                <div className="bg-gray-100 h-screen p-4 overflow-y-auto">
+                <div className="bg-gray-100 h-[490px] 4k:h-screen p-4 overflow-y-auto">
                     {filteredArticles.length > 0 ? (
 
                         filteredArticles.map((article, index) => (
