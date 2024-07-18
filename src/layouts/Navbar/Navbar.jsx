@@ -14,7 +14,7 @@ function Navbar() {
                         </h2>
                     </div>
                     {/* Aquí puedes agregar los otros elementos del navbar */}
-                    <div className="hidden sm:block sm:ml-6">
+                    <div className="sm:block sm:ml-6">
                         <div className="flex space-x-4">
                             <a
                                 href="#"
